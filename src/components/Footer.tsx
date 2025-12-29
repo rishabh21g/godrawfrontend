@@ -62,7 +62,7 @@ export default function Footer() {
           <a href="/" className="flex items-center gap-3 w-fit">
             <div className=" w-10 h-10">
               <img
-                src="../../public/icon-512.png"
+                src="../../icon-512.png"
                 alt="GoDraw Logo"
                 className="object-contain"
               />
@@ -145,7 +145,7 @@ export default function Footer() {
                       className={cn(
                         "w-full px-4 py-3 bg-background border-2",
                         "rounded-md",
-                        error ? "border-red-500" : "border-primary",
+                        error ? "border-red-500" : "border-primary"
                       )}
                     />
                     {error && (

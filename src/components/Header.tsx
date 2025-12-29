@@ -25,7 +25,7 @@ export default function Header() {
               <a href="/" className="flex items-center gap-3 shrink-0">
                 <div className="relative w-8 h-8">
                   <img
-                    src="../../public/icon-512.png"
+                    src="../../icon-512.png"
                     alt="GoDraw Logo"
                     className="object-contain"
                   />
