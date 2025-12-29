@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <>
       {/* ================= Desktop Header ================= */}
-      <header className="hidden md:flex w-full justify-center px-4 py-4 mx-auto max-w-7xl">
+      <header className="hidden md:flex w-full justify-center px-4 py-4 ">
         <nav className="bg-card/95 backdrop-blur-md border-3 border-primary px-8 py-4 w-full rounded-md shadow-sketchy">
           <div className="flex items-center justify-between">
             {/* Logo */}

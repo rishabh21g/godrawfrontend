@@ -8,16 +8,14 @@ import FAQSection from "./components/FAQsection";
 
 const App = () => {
   return (
-    <>
+    <main className="max-w-6xl h-dvh mx-auto py-8 px-10 flex flex-col space-y-6">
       <Header />
-      <main>
-        <HeroSection />
-        <Features />
-        <WorkSection />
-        <FAQSection />
-      </main>
+      <HeroSection />
+      <Features />
+      <WorkSection />
+      <FAQSection />
       <Footer />
-    </>
+    </main>
   );
 };
 

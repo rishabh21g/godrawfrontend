@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { FaChevronCircleDown } from "react-icons/fa";
 import { cn } from "../lib/utils";
@@ -65,7 +63,7 @@ export default function FAQSection() {
               className={cn(
                 "bg-card border-3 border-primary overflow-hidden",
                 "rounded-md",
-                openIndex === index && "shadow-sketchy",
+                openIndex === index && "shadow-sketchy"
               )}
             >
               <button
@@ -78,7 +76,7 @@ export default function FAQSection() {
                 <FaChevronCircleDown
                   className={cn(
                     "w-5 h-5 text-primary",
-                    openIndex === index && "rotate-180",
+                    openIndex === index && "rotate-180"
                   )}
                 />
               </button>

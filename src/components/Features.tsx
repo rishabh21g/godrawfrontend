@@ -93,12 +93,12 @@ const features: Feature[] = [
 
 export default function Features() {
   return (
-    <div className="sketchy-container" id="features">
+    <div id="features" className="py-14">
       {/* Header */}
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
           Everything you need to{" "}
-          <span className="relative inline-block text-primary">create</span>
+          <span className=" inline-block text-primary">create</span>
         </h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Powerful tools wrapped in a simple, sketchy interface.

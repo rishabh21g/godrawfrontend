@@ -5,7 +5,7 @@ import SketchyButton from "../ui/SketchyButton";
 export default function HeroSection() {
   return (
     <section className="min-h-screen pt-10 pb-20 flex flex-col items-center justify-start overflow-hidden">
-      <div className="w-full px-4">
+      <div className="w-full px-4 py-4">
         {/* TEXT CONTENT */}
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 flex justify-center">
