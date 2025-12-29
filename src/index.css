@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "tailwindcss";
+/* =========================
+   BASE STYLES & THEME TOKENS
+   ========================= */
+@layer base {
+    html {
+        font-family: "Shantell Sans", sans-serif;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    /* Use CSS variables directly instead of @apply with Tailwind utilities */
+    body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+    }
+
+    :root {
+        --background: 156 34% 92%;
+        --foreground: 173 98% 20%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 173 98% 20%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 173 98% 20%;
+
+        --primary: 173 100% 21%;
+        --primary-light: 173 98% 27%;
+        --primary-dark: 173 98% 15%;
+        --primary-foreground: 60 10% 98%;
+
+        --secondary: 180 30% 57%;
+        --secondary-light: 180 33% 67%;
+        --secondary-dark: 180 28% 52%;
+        --secondary-foreground: 173 98% 20%;
+
+        --accent: 184 32% 74%;
+        --accent-light: 184 35% 82%;
+        --accent-dark: 184 28% 63%;
+        --accent-foreground: 173 98% 20%;
+
+        --muted: 82 36% 90%;
+        --muted-foreground: 0 0% 40%;
+
+        --border: 0 0% 82%;
+        --input: 0 0% 82%;
+        --ring: 173 100% 21%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 0 0% 10%;
+        --foreground: 180 32% 80%;
+
+        --card: 0 0% 12%;
+        --card-foreground: 180 32% 80%;
+
+        --popover: 0 0% 12%;
+        --popover-foreground: 180 32% 80%;
+
+        --primary: 173 32% 40%;
+        --primary-foreground: 60 9% 98%;
+
+        --secondary: 180 28% 25%;
+        --secondary-foreground: 60 9% 98%;
+
+        --accent: 184 25% 35%;
+        --accent-foreground: 60 9% 98%;
+
+        --muted: 0 0% 20%;
+        --muted-foreground: 180 20% 70%;
+
+        --border: 0 0% 25%;
+        --input: 0 0% 25%;
+        --ring: 173 32% 40%;
+    }
+}
+
+/* =========================
+   UTILITIES (SKETCHY STYLE)
+   ========================= */
+@layer utilities {
+    .border-sketchy {
+        border: 3px solid hsl(var(--primary));
+        border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    }
+
+    .border-sketchy-thin {
+        border: 2px solid hsl(var(--primary));
+        border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
+    }
+
+    .bg-paper {
+        background-image:
+            linear-gradient(
+                90deg,
+                transparent 79px,
+                hsl(var(--accent) / 0.3) 79px,
+                hsl(var(--accent) / 0.3) 81px,
+                transparent 81px
+            ),
+            linear-gradient(hsl(var(--accent) / 0.2) 1px, transparent 1px);
+        background-size: 100% 24px;
+    }
+
+    .bg-dots {
+        background-image: radial-gradient(
+            circle,
+            hsl(var(--primary) / 0.15) 1px,
+            transparent 1px
+        );
+        background-size: 20px 20px;
+    }
+
+    .bg-grid-sketchy {
+        background-image:
+            linear-gradient(
+                to right,
+                hsl(var(--primary) / 0.08) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                to bottom,
+                hsl(var(--primary) / 0.08) 1px,
+                transparent 1px
+            );
+        background-size: 24px 24px;
+    }
+
+    .text-sketchy {
+        text-shadow: 2px 2px 0 hsl(var(--accent));
+    }
+
+    .underline-sketchy {
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: hsl(var(--primary));
+        text-underline-offset: 4px;
+    }
+
+    .highlight-sketchy {
+        background: linear-gradient(
+            180deg,
+            transparent 50%,
+            hsl(var(--accent) / 0.5) 50%
+        );
+    }
+}
+
+/* =========================
+   COMPONENTS
+   ========================= */
+@layer components {
+    .sketchy-container {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+}
+
+/* =========================
+   GLOBAL EXTRAS
+   ========================= */
+::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--primary-dark));
+}
