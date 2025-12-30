@@ -9,7 +9,7 @@ import Sponsor from "./components/Sponsor";
 
 const App = () => {
   return (
-    <main className="max-w-dvw w-full h-dvh mx-auto py-8 px-32 flex flex-col space-y-6">
+    <main className="max-w-dvw w-full h-dvh mx-auto py-4 px-2 sm:px-6 md:px-16 lg:px-32 flex flex-col space-y-4 md:space-y-6">
       <Header />
       <HeroSection />
       <Sponsor />

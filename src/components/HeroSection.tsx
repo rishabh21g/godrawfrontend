@@ -43,13 +43,6 @@ export default function HeroSection() {
         {/* VIDEO PLACEHOLDER */}
         <div className="w-full mx-auto ">
           <div className=" w-full h-full rounded-2xl shadow-lg">
-            {/* <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/a8eSgUGkfVU?autoplay=1&mute=1"
-              title="Godraw Hero Section Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
-              allowFullScreen
-            /> */}
             <img
               src="/hero.png"
               alt="Hero"
