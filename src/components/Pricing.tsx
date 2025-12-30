@@ -75,7 +75,7 @@ export default function Pricing() {
   const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
 
   return (
-    <section id="pricing" className="w-full py-20 flex flex-col items-center">
+    <section id="pricing" className="w-full p-6 flex flex-col items-center">
       <div className="text-center mb-10">
         <h2 className="text-4xl md:text-5xl font-bold my-8 tracking-tighter">
           Extend your current version to Godraw plus!

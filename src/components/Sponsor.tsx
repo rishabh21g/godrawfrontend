@@ -1,20 +1,19 @@
 import SketchyButton from "../ui/SketchyButton";
-import { FaHeart, FaCoins } from "react-icons/fa6";
+import {  FaCoins } from "react-icons/fa6";
 
 export default function Sponsor() {
   return (
     <section
       id="sponsor"
-      className="w-full flex flex-col items-center justify-center py-10"
+      className="w-full flex flex-col items-center justify-center p-6 mx-auto px-14 "
     >
       <div className="flex flex-col items-center gap-2 mb-2">
         <div className="flex items-center gap-2">
-          <FaHeart className="text-primary w-5 h-5" />
-          <span className="text-lg md:text-xl font-semibold text-primary">
+          <span className="text-lg md:text-xl  text-primary text-center">
             GoDraw is built by a solo, non-funded developer.
           </span>
         </div>
-        <span className="text-muted-foreground text-sm">
+        <span className="text-muted-foreground text-sm text-center tracking-tighter">
           If you love it, consider donating or investing to help it grow!
         </span>
       </div>

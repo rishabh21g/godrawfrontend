@@ -26,7 +26,7 @@ const steps = [
 
 export default function WorkSection() {
   return (
-    <section id="how-it-works" className="py-14 ">
+    <section id="how-it-works" className="p-6 ">
       <div className="sketchy-container">
         {/* Header */}
         <div className="text-center mb-16">

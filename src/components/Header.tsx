@@ -50,10 +50,10 @@ export default function Header() {
             <div className="flex items-center gap-8">
               {/* Social Icons */}
               <div className="flex items-center gap-3">
-                <a href="#" aria-label="Twitter">
+                <a href="#" aria-label="Twitter" onClick={()=>window.open("https://x.com/godraw_" ,"_blank")}>
                   <BsTwitterX className="w-5 h-5 text-primary hover:scale-110 transition" />
                 </a>
-                <a href="#" aria-label="Instagram">
+                <a href="#" aria-label="Instagram" onClick={()=>window.open("https://www.instagram.com/godraw.app" ,"_blank")}>
                   <IoLogoInstagram className="w-6 h-6 text-primary hover:scale-110 transition" />
                 </a>
               </div>
@@ -61,6 +61,8 @@ export default function Header() {
               {/* Login Button */}
               <SketchyButton variant="primary" size="sm">
                 Sign in
+
+
               </SketchyButton>
               <SketchyButton variant="ghost" size="sm">
                 Try for free
@@ -128,8 +130,9 @@ export default function Header() {
 
               {/* Social Icons */}
               <div className="flex justify-center gap-6 py-4">
-                <BsTwitterX className="w-6 h-6 text-primary" />
-                <IoLogoInstagram className="w-6 h-6 text-primary" />
+
+                <BsTwitterX className="w-6 h-6 text-primary" onClick={()=>window.open("https://x.com/godraw_" ,"_blank")}/>
+                <IoLogoInstagram className="w-6 h-6 text-primary" onClick={()=>window.open("https://www.instagram.com/godraw.app" ,"_blank")} />
               </div>
 
               <SketchyButton className="w-full py-3">Sign in</SketchyButton>

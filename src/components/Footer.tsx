@@ -1,6 +1,8 @@
 import { useState, type FormEvent } from "react";
-import { FaMailBulk } from "react-icons/fa";
-import { FaInstagram, FaX } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
+import { IoMail } from "react-icons/io5";
+
 import SketchyButton from "../ui/SketchyButton";
 import { cn } from "../lib/utils";
 
@@ -21,13 +23,13 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: FaX, href: "https://x.com/@godraw_", label: "X" },
+  { icon: BsTwitterX, href: "https://x.com/@godraw_", label: "X" },
   {
     icon: FaInstagram,
-    href: "https://instagram.com/@godraw.app",
+    href: "https://www.instagram.com/godraw.app",
     label: "Instagram",
   },
-  { icon: FaMailBulk, href: "mailto:helpgodraw@gmail.com", label: "Email" },
+  { icon: IoMail, href: "mailto:helpgodraw@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {
@@ -56,8 +58,8 @@ export default function Footer() {
   };
 
   return (
-    <footer>
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+    <footer id="footer" className="p-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-16 ">
         <div className="lg:col-span-5 space-y-8">
           <a href="/" className="flex items-center gap-3 w-fit">
             <div className=" w-10 h-10">

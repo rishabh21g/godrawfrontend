@@ -93,7 +93,7 @@ const features: Feature[] = [
 
 export default function Features() {
   return (
-    <div id="features" className="py-14">
+    <div id="features" className="p-6 mx-auto">
       {/* Header */}
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

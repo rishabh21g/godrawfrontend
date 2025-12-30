@@ -39,7 +39,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 ">
+    <section id="faq" className="p-6 ">
       <div className="sketchy-container">
         {/* Header */}
         <div className="text-center mb-16">
