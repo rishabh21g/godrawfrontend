@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section className="min-h-screen pt-10 pb-20 flex flex-col items-center justify-start overflow-hidden">
       <div className="w-full px-4 py-4">
         {/* TEXT CONTENT */}
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center h-full">
           <div className="mb-8 flex justify-center">
             <SketchyBadge variant="primary">
               <FaBoltLightning className="w-4 h-4 mr-1" />
@@ -40,15 +40,20 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* VIDEO */}
-        <div className="max-w-6xl mx-auto">
-          <div className="relative w-full aspect-video rounded-md overflow-hidden shadow-lg">
-            <iframe
+        {/* VIDEO PLACEHOLDER */}
+        <div className="w-full mx-auto ">
+          <div className=" w-full h-full rounded-2xl shadow-lg">
+            {/* <iframe
               className="absolute inset-0 w-full h-full"
               src="https://www.youtube.com/embed/a8eSgUGkfVU?autoplay=1&mute=1"
               title="Godraw Hero Section Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
               allowFullScreen
+            /> */}
+            <img
+              src="/hero.png"
+              alt="Hero"
+              className=" w-full h-full object-cover rounded-2xl"
             />
           </div>
         </div>

@@ -161,7 +161,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t-2 border-dashed border-primary/20 pt-8 text-sm text-muted-foreground text-center">
+        <div className=" pt-8 text-sm text-muted-foreground text-center">
           © 2025 GoDraw. Made with ✏️ for creators everywhere.
         </div>
       </div>

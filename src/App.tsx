@@ -4,14 +4,18 @@ import Features from "./components/Features";
 import HeroSection from "./components/HeroSection";
 import WorkSection from "./components/Work";
 import FAQSection from "./components/FAQsection";
+import Pricing from "./components/Pricing";
+import Sponsor from "./components/Sponsor";
 
 const App = () => {
   return (
-    <main className="max-w-6xl h-dvh mx-auto py-8 px-10 flex flex-col space-y-6">
+    <main className="max-w-dvw w-full h-dvh mx-auto py-8 px-32 flex flex-col space-y-6">
       <Header />
       <HeroSection />
+      <Sponsor />
       <Features />
       <WorkSection />
+      <Pricing />
       <FAQSection />
       <Footer />
     </main>
