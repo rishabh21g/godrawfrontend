@@ -11,17 +11,17 @@ const plans = [
   {
     name: "Free solo",
     price: "Free",
-    frequency: "Free forever",
+    frequency: "Forever",
     cta: "Draw now",
     features: [
       "Full editor functions",
       "Single infinite scene",
-      "Upto three collaborators",
-      "Export to .png, .svg or 'save to file'",
-      "Infinite librarries",
-      "E2EE locally in your browser",
+      "Up to three collaborators",
+      "Export PNG, SVG or save to file",
+      "Unlimited SVG icons",
+      "Dashboard with 2 projects",
+      "E2EE locally in browser",
       "Work offline",
-      "Free for all",
     ],
     highlight: false,
     arrow: <FaArrowRight />,
@@ -29,18 +29,18 @@ const plans = [
   {
     name: "Plus",
     price: "$4",
-    frequency: "single user only",
+    frequency: "/month",
     cta: "Try for free",
-    trial: "14 days of free trial",
+    trial: "14 days free trial",
     features: [
-      "Everything in Free +",
-      "Unlimited scenes and folders",
-      "Page based canvas with Pdf export",
-      "Securely saved on cloud",
+      "Everything in Free",
+      "Unlimited scenes & folders",
+      "Page-based canvas + PDF export",
+      "Unlimited cloud storage",
       "Access management",
-      "Sharing with edit/view rights",
-      "Read-Only non-collaborative links & Embeds",
-      "Teams management & collaboration",
+      "Edit / View permissions",
+      "Readonly share links & embeds",
+      "Team collaboration",
       "Comments",
     ],
     highlight: true,
@@ -56,15 +56,14 @@ const plans = [
       "All Plus features",
       "Unlimited users & storage",
       "Custom domain & branding",
-      "Single Sign-On (SSO)",
+      "SSO",
       "Admin dashboard & analytics",
-      "Priority support & onboarding",
-      "Dedicated cloud or on-prem deployment",
-      "API & custom integrations",
-      "Advanced security & compliance",
-      "Bulk licensing for schools/colleges",
+      "Priority onboarding",
+      "Dedicated cloud / on-prem",
+      "API & integrations",
+      "Bulk licensing",
       "Custom feature development",
-      "SLA & contract options",
+      "SLA options",
     ],
     highlight: false,
     arrow: <FaArrowDownLong />,
@@ -75,70 +74,88 @@ export default function Pricing() {
   const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
 
   return (
-    <section id="pricing" className="w-full p-6 flex flex-col items-center">
-      <div className="text-center mb-10">
-        <h2 className="text-4xl md:text-5xl font-bold my-8 tracking-tighter">
-          Extend your current version to Godraw plus!
+    <section
+      id="pricing"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
+    >
+      {/* Header */}
+      <div className="text-center mb-14">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Upgrade to GoDraw Plus
         </h2>
-        <div className="flex items-center justify-center gap-4 mb-2">
-          <span
-            className={`cursor-pointer px-4 py-2 rounded-md font-semibold ${
+
+        {/* Billing toggle */}
+        <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
+          <button
+            onClick={() => setBilling("monthly")}
+            className={`px-4 py-2 rounded-md font-semibold transition ${
               billing === "monthly"
                 ? "bg-primary text-primary-foreground"
-                : "bg-muted text-foreground"
+                : "bg-muted"
             }`}
-            onClick={() => setBilling("monthly")}
           >
             Monthly
+          </button>
+
+          <span className="text-muted-foreground hidden sm:inline">
+            Billing frequency
           </span>
-          <span className="text-muted-foreground">Billing frequency</span>
-          <span
-            className={`cursor-pointer px-4 py-2 rounded-md font-semibold flex items-center gap-2 ${
+
+          <button
+            onClick={() => setBilling("annual")}
+            className={`px-4 py-2 rounded-md font-semibold flex items-center gap-2 transition ${
               billing === "annual"
                 ? "bg-primary text-primary-foreground"
-                : "bg-muted text-foreground"
+                : "bg-muted"
             }`}
-            onClick={() => setBilling("annual")}
           >
             Annually
-            <span className="ml-1 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">
+            <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">
               save 14%
             </span>
-          </span>
+          </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-6xl">
+      {/* Pricing Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className={`relative flex flex-col border-3 rounded-2xl shadow-sketchy p-8 bg-card ${
-              plan.highlight ? "border-primary scale-105 z-10" : "border-muted"
-            }`}
+            className={`relative flex flex-col rounded-2xl border-3 bg-card p-6 sm:p-7 shadow-sketchy transition
+              ${
+                plan.highlight
+                  ? "border-primary ring-2 ring-primary/20"
+                  : "border-muted"
+              }`}
           >
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-2xl font-bold text-primary">
-                {plan.name}
-              </span>
+            {/* Plan Header */}
+            <div className="flex items-center gap-2 mb-3">
+              <h3 className="text-xl font-bold text-primary">{plan.name}</h3>
               <span className="text-primary">{plan.arrow}</span>
             </div>
-            <div className="flex items-end gap-2 mb-2">
+
+            {/* Price */}
+            <div className="flex items-baseline gap-2 mb-1">
               <span className="text-4xl font-extrabold">{plan.price}</span>
-              <span className="text-lg text-muted-foreground">
+              <span className="text-sm text-muted-foreground">
                 {plan.frequency}
               </span>
             </div>
+
             {plan.trial && (
-              <div className="mb-4 text-green-700 font-medium text-sm">
+              <div className="text-sm text-green-700 font-medium mb-4">
                 {plan.trial}
               </div>
             )}
+
+            {/* CTA */}
             {plan.name === "Enterprise" ? (
               <a
                 href={plan.contactLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mb-6 w-full"
+                className="mb-6"
               >
                 <SketchyButton variant="outline" className="w-full">
                   {plan.cta}
@@ -147,16 +164,18 @@ export default function Pricing() {
             ) : (
               <SketchyButton
                 variant={plan.highlight ? "primary" : "outline"}
-                className="mb-6 w-full"
+                className="w-full mb-6"
               >
                 {plan.cta}
               </SketchyButton>
             )}
-            <ul className="space-y-3 mb-2">
+
+            {/* Features */}
+            <ul className="space-y-3 text-sm sm:text-base">
               {plan.features.map((feature) => (
-                <li key={feature} className="flex items-center gap-2 text-base">
-                  <FaCheck className="text-primary w-4 h-4" />
-                  {feature}
+                <li key={feature} className="flex gap-2">
+                  <FaCheck className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span className="leading-snug">{feature}</span>
                 </li>
               ))}
             </ul>

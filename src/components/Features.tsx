@@ -30,124 +30,95 @@ const features: Feature[] = [
     icon: FaInfinity,
     title: "Infinite & Page-based",
     description:
-      "Start with an infinite canvas for big ideas, or use pages to organize your thoughts into structured documents.",
+      "Start with an infinite canvas for big ideas, or use pages to organize your thoughts.",
     size: "large",
   },
   {
     icon: FaBoltLightning,
     title: "Lightning Fast",
     description:
-      "Buttery smooth performance with zero lag. Optimized rendering ensures your creativity flows without interruption.",
+      "Buttery smooth performance with zero lag. Optimized rendering ensures your creativity flows.",
     size: "large",
   },
   {
     icon: MdOutlineWifiOff,
     title: "Work Offline",
     description:
-      "No internet? No problem. GoDraw works completely offline and syncs when you're back.",
+      "GoDraw works completely offline and syncs when you're back online.",
     size: "large",
   },
   {
     icon: MdSdStorage,
     title: "Persistent Storage",
-    description:
-      "Your drawings are automatically saved to your browser's local storage. Never lose an idea.",
+    description: "Automatically saved to local storage. Never lose an idea.",
     size: "large",
   },
   {
     icon: FaDownload,
-    title: "Png , Svg and Pdf Export",
-    description:
-      "Export your creations in PNG, SVG, or PDF format for easy sharing, printing, or archiving.",
+    title: "Export Anywhere",
+    description: "Export as PNG, SVG, or PDF with one click.",
     size: "large",
   },
   {
     icon: FaIcons,
-    title: "Bundles of SVGs",
-    description:
-      "Access a massive library of hand-drawn sketchy icons and shapes. Drag, drop, and customize them to fit your style.",
+    title: "Sketchy Icons",
+    description: "A huge library of hand-drawn SVG icons and shapes.",
     size: "large",
   },
   {
     icon: FaMobile,
-    title: "Work on all devices",
-    description:
-      "Use GoDraw seamlessly across your phone, tablet, and desktop. Your work syncs everywhere.",
+    title: "All Devices",
+    description: "Works beautifully on mobile, tablet, and desktop.",
     size: "large",
   },
   {
     icon: FaToolbox,
     title: "Powerful Tools",
-    description:
-      "Use a wide range of powerful drawing and editing tools to bring your ideas to life.",
+    description: "Advanced tools designed for speed and creativity.",
     size: "large",
   },
   {
     icon: FaFaceSmile,
-    title: "Simple & Easy",
-    description:
-      "Zero learning curve. The interface is designed to get out of your way so you can focus on creativity.",
+    title: "Simple UI",
+    description: "Clean, minimal interface with zero learning curve.",
     size: "large",
   },
 ];
 
 export default function Features() {
   return (
-    <div id="features" className="p-6 mx-auto">
+    <section
+      id="features"
+      className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-20"
+    >
       {/* Header */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           Everything you need to{" "}
-          <span className=" inline-block text-primary">create</span>
+          <span className="text-primary inline-block">create</span>
         </h2>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto">
           Powerful tools wrapped in a simple, sketchy interface.
         </p>
       </div>
 
-      {/* Features Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {features.map((feature) => (
-          <div
-            key={feature.title}
-            className={`${
-              feature.size === "large"
-                ? "lg:col-span-2"
-                : feature.size === "medium"
-                  ? "lg:col-span-2"
-                  : "col-span-1"
-            }`}
-          >
-            <SketchyCard className="h-full">
-              <div
-                className={`flex ${
-                  feature.size === "large"
-                    ? "flex-col sm:flex-row items-start sm:items-center gap-6"
-                    : "flex-col items-start"
-                }`}
-              >
-                <div
-                  className={`${
-                    feature.size === "large" ? "w-20 h-20" : "w-14 h-14"
-                  } bg-primary/10 rounded-full
-                    flex items-center justify-center mb-4 sm:mb-0`}
-                >
-                  <feature.icon
-                    className={`${
-                      feature.size === "large" ? "w-10 h-10" : "w-7 h-7"
-                    } text-primary`}
-                  />
+          <div key={feature.title} className="lg:col-span-2">
+            <SketchyCard className="h-full p-5 sm:p-6">
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
+                {/* Icon */}
+                <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                 </div>
 
-                <div className={feature.size === "large" ? "flex-1" : ""}>
-                  <h3
-                    className={`${
-                      feature.size === "large" ? "text-2xl" : "text-xl"
-                    } font-bold text-foreground mb-2 mt-2`}
-                  >
+                {/* Text */}
+                <div>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-1">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -156,6 +127,6 @@ export default function Features() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
