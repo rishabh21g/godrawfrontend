@@ -28,7 +28,7 @@ const plans = [
   },
   {
     name: "Plus",
-    price: "$4",
+    price: "₹499",
     frequency: "/month",
     cta: "Try for free",
     trial: "14 days free trial",

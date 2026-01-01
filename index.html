@@ -2,12 +2,81 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>godrawfrontend</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        />
+
+        <title>GoDraw — Simple, Free, Fast Online Whiteboard</title>
+        <meta
+            name="description"
+            content="GoDraw is a lightweight, free, and lightning-fast canvas whiteboard for sketches, notes, and diagrams. Start drawing instantly in your browser."
+        />
+        <meta
+            name="keywords"
+            content="whiteboard, drawing tool, sketch app, canvas drawing, online whiteboard, GoDraw, infinite canvas, collaborative drawing, sketching app, fast whiteboard, lightweight drawing tool"
+        />
+        <meta name="author" content="GoDraw" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://godraw.app/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://plus.godraw.app/" />
+        <meta
+            property="og:title"
+            content="GoDraw — Open Source Free and Fast Canvas Whiteboard"
+        />
+        <meta
+            property="og:description"
+            content="Sketch, draw, and take quick notes with a lightning-fast canvas whiteboard."
+        />
+        <meta
+            property="og:image"
+            content="https://plus.godraw.app/godraw.svg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https:/plus.godraw.app/" />
+        <meta
+            name="twitter:title"
+            content="GoDraw — Fast and Free Canvas Whiteboard"
+        />
+        <meta
+            name="twitter:description"
+            content="A lightweight, free, and instant whiteboard for drawing & sketching."
+        />
+        <meta
+            name="twitter:image"
+            content="https://plus.godraw.app/godraw.svg"
+        />
+
+        <link rel="icon" type="image/svg+xml" href="/godraw.svg" />
+        <link rel="apple-touch-icon" href="/icon-192.png" />
+        <meta name="theme-color" content="#016b61" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "GoDraw",
+                "operatingSystem": "Web",
+                "applicationCategory": "GraphicsApplication",
+                "description": "GoDraw is a fast, lightweight canvas whiteboard for sketches and diagrams.",
+                "url": "https://plus.godraw.app",
+                "image": "https://plus.godraw.app/godraw.svg",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        </script>
     </head>
     <body>
+        <noscript>You need to enable JavaScript to run GoDraw.</noscript>
+
         <div id="root"></div>
+
         <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>

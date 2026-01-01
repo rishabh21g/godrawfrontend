@@ -1,0 +1,18 @@
+# https://www.robotstxt.org/robotstxt.html
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow specific technical or private directories
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /.git/
+
+# If you have a specific path for private/temporary saved drawings (optional example)
+# Disallow: /drafts/
+
+# Host and Sitemap
+Host: https://plus.godraw.app
+Sitemap: https://plus.godraw.app/sitemap.xml
